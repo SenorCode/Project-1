@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	  
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-
-</head>
+$(document).ready(function() {
 
 
-<body>
-	 
-  
-  <div id="map">
-          
 
-   </div>
-
-   <script type="text/javascript">
-     
-     var map, infoWindow;
+  var map, infoWindow;
 
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -56,11 +39,4 @@
                           'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
   }
-
-   </script>
-    
-          
-           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE&callback=initMap"></script>
-	
-</body>
-</html>
+})
