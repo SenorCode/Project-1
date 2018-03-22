@@ -6,68 +6,120 @@
 
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
-   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE&callback=initMap"></script>
+
+   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  
+
+
+
   <title>Document</title>
 
 </head>
 
 
 <body>
-  <div class="container-fluid">
-   
-    
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+  <div class="container-fluid" id="full-width">
+   <div id="map"></div>
+   <div class="overlay-bottom text-center">
      
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-  <div id="map" style="width: 100%; height: 800px;">
+      
+      <img src="https://dummyimage.com/180x180/000/fff.jpg&text=Most+Popular">
+      <img src="https://dummyimage.com/180x180/000/fff.jpg&text=Most+Popular">
+      <img src="https://dummyimage.com/180x180/000/fff.jpg&text=Most+Popular">
+      <img src="https://dummyimage.com/180x180/000/fff.jpg">
+      <img src="https://dummyimage.com/180x180/000/fff.jpg">
+
+       
+     
+   </div>
     
+ <div class="page-border fixed-top">
+   
+ </div>
+<div id="side-menu" class="side-nav">
+  <a href="#" class="btn-close" id="closeSideBar"><i class="fas fa-power-off"></i></a>
+  <div class="search-box-wrapper">
+    <input type="text" placeholder="Search" class="search-box-input">
+    <button class="search-box-button"><i class="fas fa-search"></i></button>
   </div>
+  <a href="#">Home</a>
+  <a href="#">Home</a>
+  <a href="#">Home</a>
+  <a href="#">Home</a>
+</div>
+
+    
+    
+      
+  
+  
+  
+</div> <!-- end of container-fluid div -->
+
 
   
-  </div>
-    
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  
+    <script type="text/javascript">
+        var map, infoWindow;
 
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 12
+    });
+    infoWindow = new google.maps.InfoWindow;
 
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+
+        infoWindow.setPosition(pos);
+        infoWindow.setContent('Location found.');
+        infoWindow.open(map);
+        map.setCenter(pos);
+      }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+      });
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  } //end of initMap()
+
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+                          'Error: The Geolocation service failed.' :
+                          'Error: Your browser doesn\'t support geolocation.');
+    infoWindow.open(map);
+  }
+
+    </script>
+
+<script type="text/javascript">
+  
+</script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+   <script type="text/javascript" src="assets/javascript/sidebar.js"></script>
+
+<script type="text/javascript" href="assets/javascript/map.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE&callback=initMap"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script type="text/javascript" href="assets/javascript/map.js"></script>
 
 
 
