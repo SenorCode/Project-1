@@ -1,0 +1,132 @@
+body {
+	background-color: #1565c0;
+	overflow-x: hidden;
+}
+#full-width {
+	padding: 0;
+}
+.page-border{
+	background-color: #131823;
+	height: 70px;
+}
+.side-nav {
+	height: 100%;
+	width:0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #131823;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 500ms;
+}
+ .side-nav a{
+ 	padding: 10px 10px 10px 30px;
+ 	text-decoration: none;
+ 	font-size: 22px;
+ 	color: #ccc;
+ 	display:block;
+ 	transition: 300ms;
+ }
+
+ .side-nav a:hover{
+ 	color: #fff;
+ }
+ .side-nav .btn-close{
+	position: absolute;
+	top: 0;
+	right:33px;
+	font-size: 40px;
+	margin-left: 60px;
+ }
+@media(max-width: 768px) {
+	.side-nav{display: none;}
+	
+}
+.search-box-wrapper{
+	display: inline-flex;
+	font-size: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+}
+
+.search-box-input{
+	font-size: inherit;
+	border: 1px;
+	border-radius: 50px 0 0 50px;
+	padding: 6px 10px;
+	outline: 0;
+}
+.search-box-input:hover,
+.search-box-input:focus {
+	border-color: #0579dc;
+
+
+}
+.search-box-button{
+	font-size: inherit;
+	border: 1px solid #0579dc;
+	border-radius: 0 50px 50px 0;
+	background-color: #0579dc;
+	border-left: 0;
+	padding: 0 0.75em; 
+	color: white;
+	font-weight: bold;
+	outline: 0;
+	cursor: pointer;
+
+}
+
+.search-box-button:hover,
+.search-box-button:focus {
+	border-color: #006dde;
+	background-color: #006dde;
+}
+.navbar-collapse {
+  text-align:center;
+  }
+.navbar-nav {
+    display:inline-block;
+    float:none;
+  }
+
+  #map{
+  	
+    position: absolute;
+    top: 70px;
+    bottom: 0px;
+    width:100%;
+
+  }
+.imagesdisplay {
+	display: inline-block;
+	margin: auto;
+	width: 100%;
+}
+
+.overlay-bottom{
+	
+    position: fixed; 
+    bottom:0%;
+    width:100%;
+    background-color:#0000008f;
+	padding-left: 300px;
+    text-align: center;
+}
+.box-option {
+	display: inline-block;
+	
+	margin-left: 300px;
+}
+.image-bottom img{
+	border-radius: 10px;
+	box-shadow: 1px 4px 15px black;
+	margin-left: 50px;
+}
+
+.image-bottom img:hover {
+	transform: scale(1.05);
+	transition: 700ms;
+}
