@@ -120,3 +120,13 @@ body {
 	
 	margin-left: 300px;
 }
+.image-bottom img{
+	border-radius: 10px;
+	box-shadow: 1px 4px 15px black;
+	margin-left: 50px;
+}
+
+.image-bottom img:hover {
+	transform: scale(1.05);
+	transition: 700ms;
+}
