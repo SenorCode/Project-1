@@ -22,11 +22,11 @@ $(document).ready(function() {
   THIS WAY YOU'LL ONLY WRITE AND READ DATA FOR THAT PARTICULAR USER
 */
 
-if (userId) {
-  database.ref(userId).push({
-    dataKey: "value"
-  })
-}
+// if (userId) {
+//   database.ref(userId).push({
+//     dataKey: "value"
+//   })
+// }
 
   // Listens for login and logout
   firebase.auth().onAuthStateChanged(firebaseUser => {
@@ -40,7 +40,8 @@ if (userId) {
         console.log(childSnapshot.val());
         // whatever you wanna do with child snapshot data
       });
-      window.location = "/index.html"
+       
+      // window.location = "/index.html"
     } else {
       // WHEN YOU LOG OUT
       console.log("not logged in");
