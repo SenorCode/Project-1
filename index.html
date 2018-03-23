@@ -45,11 +45,11 @@
      
    </div>
     
- <div class="page-border fixed-top">
+ <div class="page-border fixed-top" >
    
  </div>
 <div id="side-menu" class="side-nav">
-  <a href="#" class="btn-close" id="closeSideBar"><i class="fas fa-power-off"></i></a>
+  <a href="#" class="btn-close" id="openSideBar"><i class="fas fa-power-off"></i></a>
   <div class="search-box-wrapper">
     <input type="text" placeholder="Search" class="search-box-input">
     <button class="search-box-button"><i class="fas fa-search"></i></button>
@@ -71,42 +71,13 @@
 
   
   
-    <script type="text/javascript">
-        var map, infoWindow;
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/javascript/sidebar.js"></script>
 
-  function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 12
-    });
-    infoWindow = new google.maps.InfoWindow;
-
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-
-        infoWindow.setPosition(pos);
-        infoWindow.setContent('Location found.');
-        infoWindow.open(map);
-        map.setCenter(pos);
-      }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
-      });
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  } //end of initMap()
-
-
-
-   <script type="text/javascript" src="assets/javascript/sidebar.js"></script>
-
-<script type="text/javascript" href="assets/javascript/map.js"></script>
+<script type="text/javascript" src="assets/javascript/map.js"></script>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE&callback=initMap"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
