@@ -78,7 +78,10 @@
 <script type="text/javascript" src="assets/javascript/sidebar.js"></script>
 
 <script type="text/javascript" src="assets/javascript/map.js"></script>
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE&callback=initMap"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE&callback=initMap">
+ </script>
+ <script src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latLng+"&radius=500&type=restaurant&keyword=cruise&key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4&key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE"></script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
