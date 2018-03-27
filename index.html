@@ -5,27 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" ></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300" rel="stylesheet">
 
    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
   
 
 
 
-  <title>Document</title>
+  <title>PopFoods</title>
 
 </head>
 
 
 <body>
+
   <div class="container-fluid" id="full-width">
    <div id="map"></div>
    <div class="overlay-bottom text-center">
-     
-      <a href="#" class="image-bottom">
+     <!-- <h4 class= "image1">
+
+     </h4>
+     <h4 class= "image2">
+
+    </h4>
+    <h4 class= "image3"> -->
+
+    </h4>
+      <a href="#" class="image-bottom image1">
         <img src="https://dummyimage.com/180x180/000/fff.jpg&text=Most+Popular">
       </a>
       <a href="#" class="image-bottom">
@@ -45,20 +54,39 @@
      
    </div>
     
- <div class="page-border fixed-top" >
-   
- </div>
-<div id="side-menu" class="side-nav">
-  <a href="#" class="btn-close" id="openSideBar"><i class="fas fa-power-off"></i></a>
-  <div class="search-box-wrapper">
-    <input type="text" placeholder="Search" class="search-box-input">
-    <button class="search-box-button"><i class="fas fa-search"></i></button>
+   <div class="page-border fixed-top text-center text-white" >
+    <h2 id="text-title">PopFoods 
+     </h2>
+     <div>
+        <input id="txtEmail" type="email" placeholder="Email">
+          
+        <input id="password" type="password"
+        placeholder="Password">
+    
+        <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+        <button id="btnLogin" class="btn btn-secondary">Login</button>
+        <button id="btnLogOut" class="btn btn-action hide">Logout</button>
+        </div>
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+          <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+          <!-- <script src="popfoods.js"></script> -->
+          <script src="./assets/javascript/Firebase_Auth_Stuff.js"></script>
   </div>
-  <a href="#">Home</a>
-  <a href="#">Home</a>
-  <a href="#">Home</a>
-  <a href="#">Home</a>
-</div>
+
+ <div1 id="side-menu" class="side-nav">
+   <a href="#" class="btn-close" id="closeSideBar"><i class="fas fa-power-off"></i></a>
+   <div class="search-box-wrapper">
+     <input type="text" placeholder="Search" class="search-box-input" id="search-term">
+     <button class="search-box-button" id="search-button"><i class="fas fa-search"></i></button>
+   </div>
+   
+   <!-- <a href="#">Home</a>
+   <a href="#">Home</a>
+   <a href="#">Home</a>
+   <a href="#">Home</a> -->
+ </div1>
 
     
     
@@ -72,20 +100,18 @@
   
   
     <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="assets/javascript/sidebar.js"></script>
 
 <script type="text/javascript" src="assets/javascript/map.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE&callback=initMap">
  </script>
- <script src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latLng+"&radius=500&type=restaurant&keyword=cruise&key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE"></script>
+ <!-- <script src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latLng+"&radius=500&type=restaurant&keyword=cruise&key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE"></script> -->
 <!-- <script src="https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4&key=AIzaSyAW9lFmJMYbddFXdw-loJi75xyNw_w5yaE"></script> -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 
 
 

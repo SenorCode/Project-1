@@ -21,25 +21,24 @@ body {
 	padding-top: 60px;
 	transition: 500ms;
 }
- .side-nav a{
- 	padding: 10px 10px 10px 30px;
- 	text-decoration: none;
- 	font-size: 22px;
- 	color: #ccc;
- 	display:block;
- 	transition: 300ms;
- }
-
- .side-nav a:hover{
- 	color: #fff;
- }
- .side-nav .btn-close{
+.side-nav h5{
+	padding: 10px 10px 10px 30px;
+	text-decoration: none;
+	font-size: 22px;
+	color: #ccc;
+	display:block;
+	transition: 300ms;
+}
+.side-nav h5:hover{
+	color: #fff;
+}
+.side-nav .btn-close{
 	position: absolute;
 	top: 0;
 	right:33px;
 	font-size: 40px;
 	margin-left: 60px;
- }
+}
 @media(max-width: 768px) {
 	.side-nav{display: none;}
 	
@@ -49,9 +48,7 @@ body {
 	font-size: 20px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-
 }
-
 .search-box-input{
 	font-size: inherit;
 	border: 1px;
@@ -62,8 +59,6 @@ body {
 .search-box-input:hover,
 .search-box-input:focus {
 	border-color: #0579dc;
-
-
 }
 .search-box-button{
 	font-size: inherit;
@@ -76,44 +71,39 @@ body {
 	font-weight: bold;
 	outline: 0;
 	cursor: pointer;
-
 }
-
 .search-box-button:hover,
 .search-box-button:focus {
 	border-color: #006dde;
 	background-color: #006dde;
 }
 .navbar-collapse {
-  text-align:center;
-  }
+text-align:center;
+}
 .navbar-nav {
-    display:inline-block;
-    float:none;
-  }
-
-  #map{
-  	
-    position: absolute;
-    top: 70px;
-    bottom: 0px;
-    width:100%;
-
-  }
+	display:inline-block;
+	float:none;
+}
+#map{
+	
+	position: absolute;
+	top: 70px;
+	bottom: 0px;
+	width:100%;
+}
 .imagesdisplay {
 	display: inline-block;
 	margin: auto;
 	width: 100%;
 }
-
 .overlay-bottom{
 	
-    position: fixed; 
-    bottom:0%;
-    width:100%;
-    background-color:#0000008f;
+	position: fixed; 
+	bottom:0%;
+	width:100%;
+	background-color:#0000008f;
 	padding-left: 300px;
-    text-align: center;
+	text-align: center;
 }
 .box-option {
 	display: inline-block;
@@ -125,8 +115,13 @@ body {
 	box-shadow: 1px 4px 15px black;
 	margin-left: 50px;
 }
-
 .image-bottom img:hover {
 	transform: scale(1.05);
 	transition: 700ms;
+}
+#text-title {
+	line-height: 60px;
+	font-family: 'Alegreya Sans', sans-serif;
+	margin-left: 300px;
+	float: left;
 }
